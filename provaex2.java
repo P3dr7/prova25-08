@@ -13,18 +13,13 @@ import java.util.Scanner;
 public class provaex2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double aumento, salario;
-        
-        salario=1000;
-        aumento= 1.5;
-        
-        for (int a = 1995; 2022 > a; a++) {
-           salario = salario + (salario * aumento / 100);
+        double aumento=1.5, salario=1000, ano= 1996;
+        do {
+            salario = salario + (salario * aumento / 100);
             aumento = aumento *2;
-            a++;
-            System.out.println("O salario dele no ano de: "+a+ " foi de: "+ salario); 
-            
-        }
+            ano++;
+            System.out.println("Ano: "+ ano +" Salario: "+ salario);
+        } while (ano <= 2022);
+        
     }
 }
-
